@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/selectMoneyFragment">
+
+    <fragment
+        android:id="@+id/selectMoneyFragment"
+        android:name="com.cred.assignment.home.view.SelectMoneyFragment"
+        android:label="SelectMoneyFragment">
+        <action
+            android:id="@+id/action_selectMoneyFragment_to_selectEMIFragment"
+            app:destination="@id/selectEMIFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/slide_out_up"
+            app:popEnterAnim="@anim/slide_in_down"
+            app:popExitAnim="@anim/slide_out_down" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/selectEMIFragment"
+        android:name="com.cred.assignment.home.view.SelectEMIFragment"
+        android:label="SelectEMIFragment">
+        <argument
+            android:name="amount"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_selectEMIFragment_to_selectBankFragment"
+            app:destination="@id/selectBankFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/slide_out_up"
+            app:popEnterAnim="@anim/slide_in_down"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectBankFragment"
+        android:name="com.cred.assignment.home.view.SelectBankFragment"
+        android:label="SelectBankFragment">
+        <argument
+            android:name="plan"
+            app:argType="com.cred.assignment.home.model.Plan"
+            app:nullable="true" />
+        <argument
+            android:name="amount"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="seekbar_holo_width">4dp</dimen>
+
+    <dimen name="dimenTop">0.01</dimen>
+    <dimen name="dimenBottom">0.99</dimen>
+    <dimen name="dimenStart">0.05</dimen>
+    <dimen name="dimenEnd">0.95</dimen>
+
+</resources>

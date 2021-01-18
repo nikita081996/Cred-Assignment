@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Cred</string>
+    <string name="rupee">\u20B9</string>
+    <string name="recommended">recommended</string>
+    <string name="mo">mo</string>
+    <string name="see_calculations">See calculations</string>
+    <string name="credit_amount">credit amount</string>
+    <string name="emi">EMI</string>
+    <string name="months">months</string>
+    <string name="where_should_we_send_the_money">Where should we send the money?</string>
+    <string name="amount_will_be_credited_to_the_bank_account_emi_will_also_be_debited_from_the_bank_account">amount will be credited to the bank account, EMI will also be debited from the bank account</string>
+    <string name="hdfc_bank">HDFC Bank</string>
+    <string name="_501102029299">501102029299</string>
+    <string name="change_account">Change Account</string>
+    <string name="tap_for_1_click_kyc">Tap for 1-click KYC</string>
+    <string name="how_much_do_you_wish_to_pay">how much do you wish to pay?</string>
+    <string name="choose_one_of_our_recommended_plans_or_make_your_own">choose one of our recommended plans or make your own</string>
+    <string name="create_your_own_plan">Create your own plan</string>
+    <string name="select_your_bank_amount">Select your bank amount</string>
+    <string name="nikunj_how_much_do_you_need">nikunj, how much do you need?</string>
+    <string name="move_the_dial_and_set_any_amount_do_you_need_upto_u20b9_10_00_000">move the dial and set any amount do you need upto ₹ 10,00,000</string>
+    <string name="_1_04_monthly">1.04% monthly</string>
+    <string name="stash_is_instant_money_will_be_credited_within_seconds">stash is instant, money will be credited within seconds</string>
+    <string name="proceed_to_emi_selection">Proceed to EMI Selection</string>
+</resources>

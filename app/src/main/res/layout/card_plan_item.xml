@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="plan"
+            type="com.cred.assignment.home.model.Plan" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        app:cardBackgroundColor="@color/dark_blue"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_new_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_round_corner"
+                android:backgroundTint="@color/white"
+                android:text="@string/recommended"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:visibility="@{plan.recommended ? View.VISIBLE: View.GONE}"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toTopOf="@+id/cl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cl" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/dialog_rectangle_round_corner"
+                app:colorIntValue="@{plan.colorRes}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/iv_select_plan"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:gravity="start"
+                    android:src="@drawable/ic_check_mark_circle"
+                    android:visibility="@{plan.selected ? View.VISIBLE: View.INVISIBLE}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_plan_amount"
+                    style="@style/text12Style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="start"
+                    android:text="@{`\u20B9`+ plan.amount}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_select_plan"
+                    tools:text="month" />
+
+                <TextView
+                    android:id="@+id/tv_plan_month"
+                    style="@style/text12Style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="start"
+                    android:text="/mo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_plan_amount"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_select_plan"
+                    tools:text="month" />
+
+                <TextView
+                    android:id="@+id/tv_months"
+                    style="@style/text12StyleGrey"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="start"
+                    android:text="@{`for `+ plan.month + ` months`}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_plan_amount"
+                    tools:text="month" />
+
+                <TextView
+                    android:id="@+id/tv_see_cal"
+                    style="@style/text12StyleGrey"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="start"
+                    android:text="@string/see_calculations"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_months"
+                    tools:text="month" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

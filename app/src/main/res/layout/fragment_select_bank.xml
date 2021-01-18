@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_view_cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:id="@+id/tv_down_arrow"
+        style="@style/text12Style"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_credit"
+        style="@style/text12Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/credit_amount"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_credit_amount"
+        style="@style/text12StyleGrey"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/tv_credit" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_credit_amount" />
+
+    <ImageView
+        android:id="@+id/tv_emi_down_arrow"
+        style="@style/text12Style"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@+id/tv_credit_amount" />
+
+    <TextView
+        android:id="@+id/tv_emi"
+        style="@style/text12Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/emi"
+        app:layout_constraintEnd_toStartOf="@+id/tv_emi_month"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/tv_credit_amount" />
+
+    <TextView
+        android:id="@+id/tv_emi_amount"
+        style="@style/text12StyleGrey"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_emi_month_val"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/tv_emi" />
+
+    <TextView
+        android:id="@+id/tv_emi_month"
+        style="@style/text12Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/months"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+        app:layout_constraintStart_toEndOf="@+id/tv_emi"
+        app:layout_constraintTop_toBottomOf="@+id/tv_credit_amount" />
+
+    <TextView
+        android:id="@+id/tv_emi_month_val"
+        style="@style/text12StyleGrey"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+        app:layout_constraintStart_toEndOf="@+id/tv_emi_amount"
+        app:layout_constraintTop_toBottomOf="@+id/tv_emi" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dialog_rectangle_round_corner"
+        android:backgroundTint="@color/dark_blue"
+        app:layout_constraintBottom_toTopOf="@+id/btn_kyc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_emi_amount">
+
+        <TextView
+            android:id="@+id/tv_desc"
+            style="@style/text12Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/where_should_we_send_the_money"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_short_desc"
+            style="@style/text12StyleGrey"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/amount_will_be_credited_to_the_bank_account_emi_will_also_be_debited_from_the_bank_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+        <ImageView
+            android:id="@+id/iv_bank_icon"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hdfc"
+            app:layout_constraintBottom_toBottomOf="@id/tv_bank_number"
+            app:layout_constraintStart_toStartOf="@id/guideline_start1"
+            app:layout_constraintTop_toTopOf="@id/tv_bank_name" />
+
+        <ImageView
+            android:id="@+id/iv_select_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_check_mark_circle"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_short_desc" />
+
+        <TextView
+            android:id="@+id/tv_bank_name"
+            style="@style/text12Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/hdfc_bank"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end1"
+            app:layout_constraintStart_toEndOf="@id/iv_bank_icon"
+            app:layout_constraintTop_toBottomOf="@id/tv_short_desc" />
+
+
+        <TextView
+            android:id="@+id/tv_bank_number"
+            style="@style/text12StyleGrey"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_501102029299"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end1"
+            app:layout_constraintStart_toEndOf="@id/iv_bank_icon"
+            app:layout_constraintTop_toBottomOf="@id/tv_bank_name" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_new_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_round_corner_stroke"
+            android:padding="15dp"
+            android:text="@string/change_account"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="@id/guideline_start1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bank_number" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_start1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/dimenStart" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/dimenEnd" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_kyc"
+        style="@style/btnStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="@string/tap_for_1_click_kyc"
+        app:backgroundTint="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/dimenTop" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/dimenBottom" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/dimenStart" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/dimenEnd" />
+</androidx.constraintlayout.widget.ConstraintLayout>
